@@ -1,6 +1,5 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-
 import Header from "./header.jsx";
 import Footer from "./footer.jsx";
 
@@ -14,6 +13,7 @@ function Main({ children, location }) {
     </div>
   );
 }
+
 
 Main.propTypes = {
   children: PropTypes.element.isRequired,

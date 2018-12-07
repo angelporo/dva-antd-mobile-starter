@@ -5,14 +5,6 @@ import { NavBar, Icon } from "antd-mobile";
 import styles from "./header.less";
 
 class Header extends Component {
-  goBack() {
-    console.log("ok");
-    const {
-      history: { goBack },
-    } = this.props;
-    goBack();
-  }
-
   render() {
     const { location } = this.props;
     return (
@@ -20,11 +12,8 @@ class Header extends Component {
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
-          onLeftClick={() => console.log("onLeftClick")}
-          rightContent={[
-            <Icon key="0" type="search" style={{ marginRight: "16px" }} />,
-            <Icon key="1" type="ellipsis" />,
-          ]}
+          onLeftClick={this.goBack}
+          rightContent={[<Icon key="1" type="ellipsis" />]}
         >
           首页
         </NavBar>
