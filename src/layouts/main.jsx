@@ -1,17 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Header from './header.jsx';
-import Footer from './footer.jsx';
+import Header from "./header.jsx";
+import Footer from "./footer.jsx";
 
-import styles from './main.less';
+import styles from "./main.less";
 
-function Main({
-  children, location
-}) {
+function Main({ children, location }) {
+  // <Header location={location} />
   return (
     <div className={styles.normal}>
-      <Header location={location} />
       <Footer location={location} childrens={children} />
     </div>
   );
@@ -19,7 +17,7 @@ function Main({
 
 Main.propTypes = {
   children: PropTypes.element.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 export default Main;
